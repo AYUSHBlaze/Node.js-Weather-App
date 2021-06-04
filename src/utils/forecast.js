@@ -8,7 +8,7 @@ const forecast = (longitude, latitude, callback) => {
         }else if(body.error){
             callback('Invalid Location.', undefined)
         }else{
-            callback(undefined, `${body.current.weather_descriptions[0]}.\nIt is currently ${body.current.temperature} degrees out. Though, it feels like ${body.current.feelslike} degrees.`)
+            callback(undefined, `${body.current.weather_descriptions[0]}.\nIt is currently ${body.current.temperature} degrees out. Though, it feels like ${body.current.feelslike} degrees. Humidity is ${body.current.humidity}%`)
         }
     })
 }
